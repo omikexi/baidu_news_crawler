@@ -113,7 +113,7 @@ python news_query.py
 #### 自定义查询日期：
 若需查询指定日期的新闻，可在调用函数时传入日期参数，示例：
 ```python
-# config.py的# 目标筛选日期（格式:YYYY-MM-DD):中修改
+# config.py的目标筛选日期（格式:YYYY-MM-DD):中修改
 TARGET_QUERY_DATE = "2025-10-03"
 ```
 
@@ -165,4 +165,5 @@ python word_freq_plot.py
 | 爬取时无新闻数据 | 1. 目标日期无新闻；2. 反爬机制拦截 | 1. 检查日期格式是否正确；2. 更换User-Agent或增加滚动间隔 |
 | CSV读取失败 | 1. 文件不存在；2. 编码不支持 | 1. 先执行爬取脚本生成CSV；2. 脚本会自动检测常见编码（utf-8-sig/gbk等） |
 | 词频图无中文 | 1. 未安装SimHei字体；2. 字体路径错误 | 1. 安装SimHei字体；2. 检查matplotlib字体配置是否正确 |
+
 | 浏览器残留进程 | 爬取中断导致进程未关闭 | 脚本会自动执行`taskkill`强制清理Chrome与ChromeDriver进程，无需手动操作 |
